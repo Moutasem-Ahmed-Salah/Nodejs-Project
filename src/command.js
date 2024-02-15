@@ -3,16 +3,16 @@ import { hideBin } from 'yargs/helpers';
 import pkg from 'pg';
 const { Client } = pkg;
 
-// Create a new client instance
+
 const client = new Client({
   user: 'postgres',
   host: '127.0.0.1',
-  database: 'Mynotes', // Specify your database name
+  database: 'Mynotes', 
   password: 'admin1234',
   port: 5432
 });
 
-// Connect to the database
+
 client.connect()
   .then(() => {
     console.log('Connected to PostgreSQL database');
